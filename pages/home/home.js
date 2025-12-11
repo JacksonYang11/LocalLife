@@ -1,0 +1,106 @@
+// pages/home/home.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    //存放轮播图数据
+    swiperList: [],
+    //存放九宫格数据
+    gridList: []
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+    this.getSwiperData()
+    this.getGridData()
+  },
+
+  //获取轮播图数据
+  getSwiperData(){
+    wx.request({
+      //旧接口：https://www.escook.cn/slides
+      url: 'https://applet-base-api-t.itheima.net/slides',
+      method: 'GET',
+      success: (res) => {
+        console.log(res)
+        //获取成功后更新页面数据
+        this.setData({
+          swiperList: res.data
+        })
+      },
+      fail: (err) => {
+        console.log(err)
+      }
+    })
+  },
+
+  getGridData(){
+    wx.request({
+      //旧接口：https://www.escook.cn/categories
+      url: 'https://applet-base-api-t.itheima.net/categories',
+      method: 'GET',
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          gridList: res.data
+        })
+      },
+      fail: (err) => {
+        console.log(err)
+      }
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage() {
+
+  }
+})
