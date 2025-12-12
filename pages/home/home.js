@@ -23,7 +23,7 @@ Page({
   getSwiperData(){
     wx.request({
       //旧接口：https://www.escook.cn/slides
-      url: 'https://applet-base-api-t.itheima.net/slides',
+      url: 'http://applet-base-api-t.itheima.net/slides',
       method: 'GET',
       success: (res) => {
         console.log(res)
@@ -41,7 +41,7 @@ Page({
   getGridData(){
     wx.request({
       //旧接口：https://www.escook.cn/categories
-      url: 'https://applet-base-api-t.itheima.net/categories',
+      url: 'http://applet-base-api-t.itheima.net/categories',
       method: 'GET',
       success: (res) => {
         console.log(res)
@@ -102,5 +102,25 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  //动态跳转到contact页面
+  gotoContact(){
+    wx.switchTab({
+      url: '/pages/contact/contact',
+      success: (res) => {console.log(res)},
+      fail: (res) => {console.log(res)},
+      complete: (res) => {console.log(res)}
+    })
+  },
+
+  //动态跳转到info页面
+  gotoInfo(){
+    wx.navigateTo({
+      url: '/pages/info/info?name=ls&gender=nan'
+    })
   }
+
+
+
 })

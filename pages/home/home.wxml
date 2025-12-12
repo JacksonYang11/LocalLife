@@ -16,3 +16,8 @@
   <image src="/images/link-01.png" mode="widthFix"/>
   <image src="/images/link-02.png" mode="widthFix"/>
 </view>
+
+<navigator url="/pages/message/message" open-type="switchTab">导航到message页面</navigator>
+<navigator url="/pages/info/info?name=zhangsan&age=20">导航到info页面</navigator>
+<button bind:tap="gotoContact">跳转到contact页面</button>
+<button bind:tap="gotoInfo">跳转到info页面</button>
