@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    count: 0
   },
 
   /**
@@ -47,14 +47,18 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    console.log('触发message页下拉刷新')
+    this.setData({
+      count: 0
+    })
+    wx.stopPullDownRefresh()
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-
+    console.log('触发上拉触底功能')
   },
 
   /**
@@ -62,5 +66,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  addCount(){
+    this.setData({
+      count: this.data.count + 1
+    })
   }
+
 })

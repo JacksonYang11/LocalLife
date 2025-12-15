@@ -19,5 +19,5 @@
 
 <navigator url="/pages/message/message" open-type="switchTab">导航到message页面</navigator>
 <navigator url="/pages/info/info?name=zhangsan&age=20">导航到info页面</navigator>
-<button bind:tap="gotoContact">跳转到contact页面</button>
+<button bind:tap="gotoMessage">跳转到message页面</button>
 <button bind:tap="gotoInfo">跳转到info页面</button>
