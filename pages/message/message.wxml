@@ -2,4 +2,14 @@
 <text>pages/message/message.wxml</text>
 <view>count值：{{count}}</view>
 <button bind:tap="addCount">count值自增</button>
+<view>userName: {{m1.toUpper(userName)}}</view>
+<view>city: {{m2.toLower(city)}}</view>
 <view class="box"></view>
+
+<wxs module="m1">
+  module.exports.toUpper = function(str){
+    return str.toUpperCase()
+  }
+</wxs>
+
+<wxs module="m2" src="../../utils/tools.wxs"></wxs>

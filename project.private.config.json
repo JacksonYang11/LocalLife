@@ -23,11 +23,18 @@
     "miniprogram": {
       "list": [
         {
-          "name": "联络页面调试",
-          "pathName": "pages/contact/contact",
+          "name": "消息页面调试",
+          "pathName": "pages/message/message",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "联络页面调试",
+          "pathName": "pages/contact/contact",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

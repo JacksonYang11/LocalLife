@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    count: 0
+    count: 0,
+    userName: 'zhanglin',
+    city: 'NANJING'
   },
 
   /**

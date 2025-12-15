@@ -66,14 +66,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    console.log('onShow')
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
-
+    console.log('onHide')
   },
 
   /**
