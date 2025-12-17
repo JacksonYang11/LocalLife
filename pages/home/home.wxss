@@ -10,7 +10,7 @@ swiper image{
 
 .grid-list{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   border-left: 1rpx solid #efefef;
   border-top: 1rpx solid #efefef;
 }

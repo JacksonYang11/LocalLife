@@ -18,5 +18,18 @@
     "checkInvalidKey": true,
     "ignoreDevUnusedFiles": true
   },
-  "libVersion": "3.12.1"
+  "libVersion": "3.12.1",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "商品列表页调试",
+          "pathName": "pages/shoplist/shoplist",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
+  }
 }
